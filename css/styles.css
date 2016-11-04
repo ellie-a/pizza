@@ -1,0 +1,20 @@
+.jumbotron {
+  background-image: url("http://data.whicdn.com/images/103898887/original.jpg");
+  background-size: cover;
+  background-position: 0% 26%;
+  background-repeat: no-repeat;
+  color: #9975b9;
+
+}
+
+body {
+  background-image: url(http://static3.businessinsider.com/image/55b675ab2acae7c7018ba34e-1200/milky-way-galaxy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.well {
+  opacity: 0.6;
+  color: #800000;
+
+}

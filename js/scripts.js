@@ -4,7 +4,7 @@ function Pizza(size, toppings) {
   this.price= 0;
 }
 
-var cutomerOrder;
+//var cutomerOrder;
 
 Pizza.prototype.orderTotal = function() {
   alert("hello")
