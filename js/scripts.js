@@ -42,14 +42,15 @@ $(document).ready(function(){
        customerToppings.push(toppings);
      });
 
+
+
+     //guess at how to show price
      $("#.total").show();
      var newPizza = new Pizza(size,toppings);
-     $("#total").text(newPizza)
+     $("#total").append(newPizza)
 
    });
   });
 
 
-    // $("#price").show();
-    // var yourPrice = customerOrder.orderTotal();
-    // $("#price").append(yourPrice + "<br>");
+  
