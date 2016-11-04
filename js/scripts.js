@@ -31,11 +31,11 @@ $(document).ready(function(){
     event.preventDefault();
     debugger;
 
-    $("#pizzaSize").show();
+    $("#pizzaSize").show(); //wont show anymore
     var size = $("input:radio[name=size]:checked").val();
 
 
-    $("#pizzaToppings").show();
+    $("#pizzaToppings").show();  //same
     var customerToppings = [];
    $("input:checkbox[name=toppings]:checked").each(function() {
        var toppings = $(this).val();
@@ -51,6 +51,3 @@ $(document).ready(function(){
 
    });
   });
-
-
-  
