@@ -7,7 +7,6 @@ function Pizza(sizes, toppings, price) {
 
 
 Pizza.prototype.orderTotal = function() {
-  alert("hello")
   this.price =0;
   if (this.sizes === "Small"){
    this.price += 14;
@@ -16,7 +15,7 @@ Pizza.prototype.orderTotal = function() {
  } else if (this.sizes === "Large") {
    this.price += 18;
  }
- for (var i = 0; i < this.toppings.length; i++) {
+if (this.toppings === "Pepperoni") {
    this.price += 1;
  }
 }
@@ -38,21 +37,16 @@ $(document).ready(function(){
 
     $("#pizzaToppings").show();
     var toppings = $("input:radio[name=topping]:checked").val();
-    // var customerToppings = [];
-  //  $("input:checkbox[name=toppings]:checked").each(function() {
-    //    var toppings = $(this.toppings).val();
-    //    $("#pizzaToppings").append(toppings)
-    //   //  customerToppings.push(toppings);
-    //  });
+
+    // I THINK I WOULD GET IT HOW TO USE CHECKBPXES NOW
 
      var newPizza = new Pizza(sizes, toppings)
 
      newPizza.orderTotal();
-     console.log(newPizza)
 
-     $("#total").show();
-
-     $("#total").text(newPizza)
+     $("#pizzaSize").text(newPizza.sizes);
+     $("#customerToppings").text(newPizza.toppings);
+     $("#total").text(newPizza.price);
 
    });
   });
