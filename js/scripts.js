@@ -1,53 +1,58 @@
-function Pizza(size, toppings) {
-  this.sizes = size;
+function Pizza(sizes, toppings, price) {
+  this.sizes = sizes;
   this.toppings = toppings;
-  this.price= 0;
+  this.price= price;
 }
 
-//var cutomerOrder;
+
 
 Pizza.prototype.orderTotal = function() {
   alert("hello")
   this.price =0;
-  if (this.size === "Small"){
+  if (this.sizes === "Small"){
    this.price += 14;
- } else if (this.size === "Medium") {
+ } else if (this.sizes === "Medium") {
    this.price +=16;
- } else if (this.size === "Large") {
+ } else if (this.sizes === "Large") {
    this.price += 18;
- } for (var i = 0; i < this.toppings.length; i++) {
-   this.price += 0.5;
- } return this.price.toFixed(2);
+ }
+ for (var i = 0; i < this.toppings.length; i++) {
+   this.price += 1;
+ }
 }
+
 
 
 
 //userInterface
 $(document).ready(function(){
 
-  //  var newPizza = new Pizza()
+
 
   $("form.order").submit(function(event){
     event.preventDefault();
-    debugger;
 
-    $("#pizzaSize").show(); //wont show anymore
-    var size = $("input:radio[name=size]:checked").val();
-
-
-    $("#pizzaToppings").show();  //same
-    var customerToppings = [];
-   $("input:checkbox[name=toppings]:checked").each(function() {
-       var toppings = $(this).val();
-       customerToppings.push(toppings);
-     });
+    $("#pizzaSize").show();
+    var sizes = $("input:radio[name=size]:checked").val();
 
 
+    $("#pizzaToppings").show();
+    var toppings = $("input:radio[name=topping]:checked").val();
+    // var customerToppings = [];
+  //  $("input:checkbox[name=toppings]:checked").each(function() {
+    //    var toppings = $(this.toppings).val();
+    //    $("#pizzaToppings").append(toppings)
+    //   //  customerToppings.push(toppings);
+    //  });
 
-     //guess at how to show price
-     $("#.total").show();
-     var newPizza = new Pizza(size,toppings);
-     $("#total").append(newPizza)
+     var newPizza = new Pizza(sizes, toppings)
+
+     newPizza.orderTotal();
+     console.log(newPizza)
+
+     $("#total").show();
+
+     $("#total").text(newPizza)
 
    });
   });
