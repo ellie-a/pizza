@@ -10,7 +10,7 @@ _The website takes in a custom pizza order from the user and returns a price val
 
 ## Setup/Installation Requirements
 
-* _Use the github url to clone to desktop (git clone )_
+* _Use the github url to clone to desktop ( https://ellie-a.github.io/pizza )_
 * _Go into file and open index_
 * _Place order_
 
